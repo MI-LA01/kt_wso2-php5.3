@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/323/v1/code/applications/ws02-wsf-framework/trunk/wsf_c/sandesha2c/config
+END
+module.xml
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/!svn/ver/323/v1/code/applications/ws02-wsf-framework/trunk/wsf_c/sandesha2c/config/module.xml
+END
+axis2.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/!svn/ver/323/v1/code/applications/ws02-wsf-framework/trunk/wsf_c/sandesha2c/config/axis2.xml
+END
+sqlite_schema.bat
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/!svn/ver/323/v1/code/applications/ws02-wsf-framework/trunk/wsf_c/sandesha2c/config/sqlite_schema.bat
+END
+sqlite_schema.sh
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/!svn/ver/323/v1/code/applications/ws02-wsf-framework/trunk/wsf_c/sandesha2c/config/sqlite_schema.sh
+END

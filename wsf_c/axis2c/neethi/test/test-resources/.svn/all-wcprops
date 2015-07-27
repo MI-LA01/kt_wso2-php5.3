@@ -1,0 +1,89 @@
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/!svn/ver/323/v1/code/applications/ws02-wsf-framework/trunk/wsf_c/axis2c/neethi/test/test-resources
+END
+different-level-policies.xml
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/!svn/ver/323/v1/code/applications/ws02-wsf-framework/trunk/wsf_c/axis2c/neethi/test/test-resources/different-level-policies.xml
+END
+services-1.xml
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/!svn/ver/323/v1/code/applications/ws02-wsf-framework/trunk/wsf_c/axis2c/neethi/test/test-resources/services-1.xml
+END
+services-2.xml
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/!svn/ver/323/v1/code/applications/ws02-wsf-framework/trunk/wsf_c/axis2c/neethi/test/test-resources/services-2.xml
+END
+services-3.xml
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/!svn/ver/323/v1/code/applications/ws02-wsf-framework/trunk/wsf_c/axis2c/neethi/test/test-resources/services-3.xml
+END
+services-4.xml
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/!svn/ver/323/v1/code/applications/ws02-wsf-framework/trunk/wsf_c/axis2c/neethi/test/test-resources/services-4.xml
+END
+services-sc-1.xml
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/!svn/ver/323/v1/code/applications/ws02-wsf-framework/trunk/wsf_c/axis2c/neethi/test/test-resources/services-sc-1.xml
+END
+services-5.xml
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/!svn/ver/323/v1/code/applications/ws02-wsf-framework/trunk/wsf_c/axis2c/neethi/test/test-resources/services-5.xml
+END
+services-sc-2.xml
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/!svn/ver/323/v1/code/applications/ws02-wsf-framework/trunk/wsf_c/axis2c/neethi/test/test-resources/services-sc-2.xml
+END
+services-6.xml
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/!svn/ver/323/v1/code/applications/ws02-wsf-framework/trunk/wsf_c/axis2c/neethi/test/test-resources/services-6.xml
+END
+services-7.xml
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/!svn/ver/323/v1/code/applications/ws02-wsf-framework/trunk/wsf_c/axis2c/neethi/test/test-resources/services-7.xml
+END
+message-services-sc.xml
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/!svn/ver/323/v1/code/applications/ws02-wsf-framework/trunk/wsf_c/axis2c/neethi/test/test-resources/message-services-sc.xml
+END
+services-8.xml
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/!svn/ver/323/v1/code/applications/ws02-wsf-framework/trunk/wsf_c/axis2c/neethi/test/test-resources/services-8.xml
+END
+services-9.xml
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/!svn/ver/323/v1/code/applications/ws02-wsf-framework/trunk/wsf_c/axis2c/neethi/test/test-resources/services-9.xml
+END
+echo-services.xml
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/!svn/ver/323/v1/code/applications/ws02-wsf-framework/trunk/wsf_c/axis2c/neethi/test/test-resources/echo-services.xml
+END

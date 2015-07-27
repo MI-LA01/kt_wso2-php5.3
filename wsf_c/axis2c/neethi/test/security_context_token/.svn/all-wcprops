@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/!svn/ver/323/v1/code/applications/ws02-wsf-framework/trunk/wsf_c/axis2c/neethi/test/security_context_token
+END
+build.sh
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/!svn/ver/323/v1/code/applications/ws02-wsf-framework/trunk/wsf_c/axis2c/neethi/test/security_context_token/build.sh
+END
+security_context_token_test.c
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svn/!svn/ver/323/v1/code/applications/ws02-wsf-framework/trunk/wsf_c/axis2c/neethi/test/security_context_token/security_context_token_test.c
+END

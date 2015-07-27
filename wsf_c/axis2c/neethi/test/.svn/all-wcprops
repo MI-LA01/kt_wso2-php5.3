@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/323/v1/code/applications/ws02-wsf-framework/trunk/wsf_c/axis2c/neethi/test
+END
+test.c
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/!svn/ver/323/v1/code/applications/ws02-wsf-framework/trunk/wsf_c/axis2c/neethi/test/test.c
+END
+Makefile.in
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/!svn/ver/323/v1/code/applications/ws02-wsf-framework/trunk/wsf_c/axis2c/neethi/test/Makefile.in
+END
+main.c
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/!svn/ver/323/v1/code/applications/ws02-wsf-framework/trunk/wsf_c/axis2c/neethi/test/main.c
+END
+Makefile.am
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/!svn/ver/323/v1/code/applications/ws02-wsf-framework/trunk/wsf_c/axis2c/neethi/test/Makefile.am
+END
+test-policy.xml
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/!svn/ver/323/v1/code/applications/ws02-wsf-framework/trunk/wsf_c/axis2c/neethi/test/test-policy.xml
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/!svn/ver/473/v1/code/applications/ws02-wsf-framework/trunk/wsf_c/axis2c/neethi/test/Makefile
+END

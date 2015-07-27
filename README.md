@@ -1,1 +1,1 @@
-# kt_wso2-php5.3
+# kt_ws02-php5.3

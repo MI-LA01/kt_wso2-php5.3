@@ -1,0 +1,10 @@
+#! /bin/sh
+#
+# Created by configure
+
+CC='gcc-4.4' \
+'./configure' \
+'--disable-option-checking' \
+'--prefix=/usr/local/wsf_c' \
+'--enable-libxml2=yes' \
+"$@"
