@@ -26,3 +26,7 @@ stamp-h.in
 *.o
 .deps
 *.exe
+*.so
+axis2_http_server
+tcpmon
+wsclient
