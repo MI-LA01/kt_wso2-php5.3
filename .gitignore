@@ -32,3 +32,6 @@ tcpmon
 wsclient
 INSTALL
 COPYING
+*.la
+*.lo
+*.libs
