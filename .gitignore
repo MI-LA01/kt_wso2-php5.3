@@ -2,7 +2,6 @@ Makefile
 Makefile.in
 aclocal.m4
 autom4te.cache
-build
 config.cache
 config.guess
 config.h
@@ -24,5 +23,7 @@ stamp-h.in
 *~
 *.swp
 *.o
-.deps
+.deps/
+.libs/
+*.l[ao]
 *.exe
