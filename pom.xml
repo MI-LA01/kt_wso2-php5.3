@@ -140,7 +140,10 @@
                         </goals>
                         <phase>compile</phase>
                         <configuration>
-                            <executable>autoreconf -fsi</executable>
+                            <executable>autoreconf</executable>
+                            <arguments>
+                                <argument>-fsi</argument>
+                            </arguments>
                         </configuration>
                     </execution>
                     
