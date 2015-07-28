@@ -13,7 +13,7 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-prefix=/usr/local/wsf_c
+prefix=/home/agruet/08_KRK_sources/10_GIT/kt_wso2-php5.3/out
 exec_prefix=${prefix}
 libdir=${exec_prefix}/lib
 includedir=${prefix}/include/axis2-1.6.0
