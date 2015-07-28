@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  
+  Copyright (c) 2015-2018 KROKNET S.A.R.L 
+    
+  author: MI-LA01 <la01[at]mediainspection.hk 
+  
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.kroknet</groupId>
+    <artifactId>kt-wso2-php53</artifactId>
+    <name>${project.artifactId}</name>
+    <description>wso2 for php - A kroknet implementation of wso2 for php 5.3</description>
+    <packaging>pom</packaging>
+    <version>2.1.0-SNAPSHOT</version>
+    
+     <properties>
+        <package.name>${project.artifactId}-${package.target}</package.name>
+        <package.version>${project.version}.${buildnumber}</package.version>
+        <package.installdir>./</package.installdir>
+    </properties>
+    
+    <organization>
+        <name>KROKNET S.A.R.L</name>
+        <url>http://www.kroknet.com/</url>
+    </organization>
+    
+    <issueManagement>
+        <system>Github</system>
+        <url>https://github.com/mi-la01/kt_wso2-php5.3/issues</url>
+    </issueManagement>
+    
+    <ciManagement>
+        <system>Jenkins</system>
+        <url>https://dev.kroknet.com/jenkins</url>
+    </ciManagement>
+    
+    <distributionManagement>
+        <repository>
+            <id>kroknet-releases</id>
+            <url>http://dev.kroknet.com/artifactory/kroknet-releases</url>
+        </repository>
+        <snapshotRepository>
+            <id>kroknet-snapshots</id>
+            <url>http://dev.kroknet.com/artifactory/kroknet-snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
+    
+    <scm>
+        <url>https://github.com/mi-la01/kt_wso2-php5.3</url>
+        <connection>scm:git:git@github.com:mi-la01/kt_wso2-php5.3.git</connection>
+        <developerConnection>scm:git:git@github.com:mi-la01/kt_wso2-php5.3.git</developerConnection>
+    </scm>
+    
+    <developers>
+        <developer>
+            <id>MI-LA01</id>
+            <name>Media Inspection Lead Architect 01</name>
+            <email>la01@mediainspection.hk</email>
+            <organization>KROKNET S.A.R.L</organization>
+            <organizationUrl>http://www.kroknet.com/</organizationUrl>
+            <timezone>+1</timezone>
+            <roles>
+                <role>Lead Architect</role>
+            </roles>
+        </developer>
+    </developers>
+    
+    <!-- BUILD kt_scheduler-car. 
+    
+     -->
+    <build>
+        <plugins>
+        
+            <!-- 
+                   Git flow
+             -->
+            <plugin>
+                <groupId>external.atlassian.jgitflow</groupId>
+                <artifactId>jgitflow-maven-plugin</artifactId>
+                <version>1.0-m5.1</version>
+                <configuration>
+                    <allowUntracked>true</allowUntracked>
+                    <pushFeatures>true</pushFeatures>
+                    <pushReleases>true</pushReleases>
+                    <pushHotfixes>true</pushHotfixes>
+                    <noDeploy>true</noDeploy>
+                    <flowInitContext>
+                        <developBranchName>dev</developBranchName>
+                    </flowInitContext>
+                </configuration>
+            </plugin>
+        
+            <!-- 
+                Buildnumber management
+             -->
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>buildnumber-maven-plugin</artifactId>
+                <version>1.3</version>
+                <executions>
+                    <execution>
+                        <phase>validate</phase>
+                        <goals>
+                            <goal>create</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <shortRevisionLength>8</shortRevisionLength>
+                            <doCheck>false</doCheck>
+                            <doUpdate>false</doUpdate>
+                    <timestampFormat>
+                    {0,date,yyyy-MM-dd HH:mm:ss}
+                    </timestampFormat>
+                </configuration>
+            </plugin>
+            
+            <!-- 
+                Compile barbershop
+             -->
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <extensions>true</extensions>
+                <version>1.1</version>
+                <executions>
+                    
+                    <!-- 
+                        Prepare compile
+                     -->
+                    <execution>
+                        <id>kt-wso2-uexe-autoconf</id>
+                        <goals>
+                            <goal>exec</goal>
+                        </goals>
+                        <phase>compile</phase>
+                        <configuration>
+                            <executable>autoconf -fsi</executable>
+                        </configuration>
+                    </execution>
+                    
+                    <!-- 
+                        Configure
+                     -->
+                    <execution>
+                        <id>kt-wso2-uexe-configure</id>
+                        <goals>
+                            <goal>exec</goal>
+                        </goals>
+                        <phase>compile</phase>
+                        <configuration>
+                            <executable>configure</executable>
+                            <arguments>
+                                <argument>--enable-libxml2=yes</argument>
+                                <argument>--enable-tests=no</argument>
+                                <argument>--enable-guththila=no</argument>
+                                <argument>--enable-openssl</argument>
+                                <argument>CC=gcc-4.4</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+                    
+                    <!-- 
+                        make 
+                     -->
+                    <execution>
+                        <id>kt-wso2-uexe-compilation</id>
+                        <goals>
+                            <goal>exec</goal>
+                        </goals>
+                        <phase>compile</phase>
+                        <configuration>
+                            <executable>make</executable>
+                        </configuration>
+                    </execution>
+                    
+                     <!-- 
+                        make install 
+                     -->
+                    <execution>
+                        <id>kt-wso2-uexe-installation</id>
+                        <goals>
+                            <goal>exec</goal>
+                        </goals>
+                        <phase>compile</phase>
+                        <configuration>
+                            <executable>make</executable>
+                            <arguments>
+                                <argument>install</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+                    
+                </executions>
+            </plugin>
+          
+        </plugins>
+    </build>
+    
+    <!-- Profile Deploy 
+    
+         Assemble and create the debian archive.
+     -->
+    <profiles>
+        <profile>
+            <id>deploy</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <artifactId>maven-assembly-plugin</artifactId>
+                        <version>2.2-beta-5</version>
+                        <dependencies>
+                            <dependency>
+                                <groupId>com.kroknet</groupId>
+                                <artifactId>kt_scheduler-car-assembly-descriptor</artifactId>
+                                <version>1.0.1-SNAPSHOT</version>
+                            </dependency>
+                        </dependencies>
+                        <executions>
+                            <execution>
+                                <goals>
+                                    <goal>single</goal>
+                                </goals>
+                                <phase>prepare-package</phase>
+                                <configuration>
+                                    <finalName>${package.name}-${package.version}_amd64</finalName>
+                                    <descriptors>
+                                        <descriptor>assembly-descriptor.xml</descriptor>
+                                    </descriptors>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+ 
+                    <plugin>
+                        <groupId>org.codehaus.mojo</groupId>
+                        <artifactId>exec-maven-plugin</artifactId>
+                        <version>1.1</version>
+                        <executions>
+                            <execution>
+                                <id>build-deb</id>
+                                <phase>package</phase>
+                                <goals>
+                                    <goal>exec</goal>
+                                </goals>
+                                <configuration>
+                                    <executable>fakeroot</executable>
+                                    <arguments>
+                                        <argument>dpkg-deb</argument>
+                                        <argument>--build</argument>
+                                        <argument>target/${package.name}-${package.version}_amd64/${package.name}-${package.version}_amd64</argument>
+                                    </arguments>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+        
+        
+       <!-- Usued profile / evironment
+       
+       
+        --> 
+       <profile>
+            <id>dev</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <properties>
+                <package.target>dev</package.target>
+            </properties>
+        </profile>
+ 
+        <profile>
+            <id>test</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <properties>
+                <package.target>test</package.target>
+            </properties>
+        </profile>
+ 
+        <profile>
+            <id>stage</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <properties>
+                <package.target>stage</package.target>
+            </properties>
+        </profile>
+ 
+        <profile>
+            <id>prod</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <properties>
+                <package.target>prod</package.target>
+            </properties>
+        </profile>
+        
+    </profiles>
+</project>
