@@ -1,13 +1,18 @@
 # kt_ws02-php5.3
 
-## prepare
+## Libtools
 ```
 autoreconf -fsi
 ```
 
-## Conf
+## Configure
 ```
-./configure --enable-libxml2=yes  CC=gcc-4.4 --enable-tests=false --enable-guththila=false --enable-openssl
-make
+./configure --enable-libxml2=yes  CC=gcc-4.4 --enable-tests=no --enable-guththila=no --enable-openssl
 
+```
+
+## Compile
+
+```
+make
 ```
