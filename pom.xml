@@ -140,7 +140,7 @@
                         </goals>
                         <phase>compile</phase>
                         <configuration>
-                            <executable>autoconf -fsi</executable>
+                            <executable>autoreconf -fsi</executable>
                         </configuration>
                     </execution>
                     
@@ -160,6 +160,7 @@
                                 <argument>--enable-tests=no</argument>
                                 <argument>--enable-guththila=no</argument>
                                 <argument>--enable-openssl</argument>
+                                <argument>--prefix=${basedir}/output</argument>
                                 <argument>CC=gcc-4.4</argument>
                             </arguments>
                         </configuration>
@@ -264,10 +265,7 @@
         </profile>
         
         
-       <!-- Usued profile / evironment
-       
-       
-        --> 
+       <!-- Usued profile / evironment --> 
        <profile>
             <id>dev</id>
             <activation>
