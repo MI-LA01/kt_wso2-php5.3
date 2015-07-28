@@ -9,6 +9,7 @@ config.h.in
 config.log
 config.status
 config.sub
+config.nice
 configure
 depcomp
 install-sh
@@ -37,3 +38,10 @@ COPYING
 *.lo
 *.libs
 .project
+configure.in
+src/build
+src/.deps
+src/Makefile.fragments
+src/Makefile.global
+src/Makefile.objects
+out/

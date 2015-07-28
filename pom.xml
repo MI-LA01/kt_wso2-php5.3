@@ -163,7 +163,7 @@
                                 <argument>--enable-tests=no</argument>
                                 <argument>--enable-guththila=no</argument>
                                 <argument>--enable-openssl</argument>
-                                <argument>--prefix=${basedir}/output</argument>
+                                <argument>--prefix=${basedir}/out/usr/local/wsf_c</argument>
                                 <argument>CC=gcc-4.4</argument>
                             </arguments>
                         </configuration>
@@ -196,7 +196,7 @@
                             <executable>make</executable>
                             <arguments>
                                 <argument>install</argument>
-				<argument>INSTALL_ROOT=output</argument>
+				<argument>INSTALL_ROOT=${basedir}/out</argument>
                             </arguments>
                         </configuration>
                     </execution>
