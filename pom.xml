@@ -196,6 +196,7 @@
                             <executable>make</executable>
                             <arguments>
                                 <argument>install</argument>
+				<argument>INSTALL_ROOT=output</argument>
                             </arguments>
                         </configuration>
                     </execution>
