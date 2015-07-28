@@ -27,3 +27,12 @@ stamp-h.in
 .libs/
 *.l[ao]
 *.exe
+*.so
+axis2_http_server
+tcpmon
+wsclient
+INSTALL
+COPYING
+*.la
+*.lo
+*.libs
