@@ -36,3 +36,4 @@ COPYING
 *.la
 *.lo
 *.libs
+.project
