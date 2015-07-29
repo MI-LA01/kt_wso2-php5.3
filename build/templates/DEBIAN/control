@@ -1,0 +1,8 @@
+Package: ${package.name}
+Priority: optional
+Section: web
+Maintainer: alexis.gruet@kroknet.com
+Architecture: amd64
+Version: ${package.version}
+Depends: libxml2, php5, php5-xsl 
+Description: ${description}
