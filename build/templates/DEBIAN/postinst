@@ -23,6 +23,9 @@ case "$1" in
         #chown -R www-data:www-data ${package.installdir} ;
         #find ${package.installdir} -type f -exec chmod 0444 {} \;
         #find ${package.installdir} -type d -exec chmod 0755 {} \;
+        
+        #Load lib
+        ldconfig
     ;;
 
     abort-upgrade|abort-remove|abort-deconfigure)
