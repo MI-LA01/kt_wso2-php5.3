@@ -3,12 +3,8 @@
   
   Copyright (c) 2015-2018 KROKNET S.A.R.L 
     
-  author: MI-LA01 <la01[at]mediainspection.hk 
-  
--->
-<project xmlns="http://maven.apache.org/POM/4.0.0" 
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  author: MI-LA01 <la01[at]mediainspection.hk -->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.kroknet</groupId>
@@ -18,7 +14,7 @@
         Web Services in PHP. WSO2 WSF/PHP supports SOAP 1.1, SOAP 1.2, WSDL 1.1, WSDL 2.0, REST style invocation as well as some of the key 
         WS-* stack specifications such as: SOAP MTOM, WS-Addressing, WS-Security, WS-SecurityPolicy and WS-ReliableMessaging.</description>
     <packaging>pom</packaging>
-    <version>2.1.0-SNAPSHOT</version>
+    <version>2.1.0</version>
     
      <properties>
         <package.name>${project.artifactId}-${package.target}</package.name>
