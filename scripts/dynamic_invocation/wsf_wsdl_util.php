@@ -1325,11 +1325,8 @@ function wsf_attach_xsd_imports($wsdl_types_node, $wsdl_dom, $schema_node, $rela
                     $already_added_xsds[$imported_location] = TRUE;
                     ws_log_write(__FILE__, __LINE__, WSF_LOG_DEBUG, "importing xsd: $imported_location from: $relative_url");
                     $imported_dom = new DOMDocument();
-		    
-   			$imp = substr_replace($imported_location ,"pgodzins:cheit0Ohroh5$@",8,0) ;
-
-		    $imported_content = file_get_contents($imp, 0, $stream_ctx);
-                    if($imported_dom->loadXML($imported_content)) {
+                    $imported_content = file_get_contents($imported_location, 0, $stream_ctx);
+		    if($imported_dom->loadXML($imported_content)) {
                         $imported_root = $imported_dom->documentElement;
                         if($imported_root && $imported_root->nodeType == XML_ELEMENT_NODE &&
                                 $imported_root->localName == "schema") {
