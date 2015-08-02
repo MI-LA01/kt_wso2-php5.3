@@ -16,7 +16,7 @@ wsclient_LDADD   = $(LDFLAGS) \
 		   ../../axis2c/src/core/transport/http/receiver/libaxis2_http_receiver.la \
 		   ../../axis2c/neethi/src/util/libneethi_util.la \
 		   ../../axis2c/neethi/src/libneethi.la \
-                   ../../axis2c/axiom/src/parser/libxml2/.libs/libaxis2_parser.so \
+                   ../../axis2c/axiom/src/parser/guththila/.libs/libaxis2_parser.so \
 		   ../../axis2c/src/core/transport/http/common/.libs/libaxis2_http_common.so.0 \
                    ../../rampartc/src/util/.libs/librampart.so \
 		   $(GUTHTHILA_LIBS) \
@@ -26,11 +26,11 @@ wsclient_LDADD   = $(LDFLAGS) \
                    $(LIBXML2_LIBS)
 
 
-INCLUDES =	-I ../../axis2c/util/include \
+INCLUDES =  -I ../../axis2c/util/include \
             -I ../../axis2c/include \
             -I ../../axis2c/axiom/include \
             -I ../../axis2c/neethi/include \
-			-I ../../axis2c/neethi/src/util \
+	    -I ../../axis2c/neethi/src/util \
             -I ../../rampartc/include 
 
 EXTRA_DIST=constants.h error.h option.h stub.h util.h wsclient.h
