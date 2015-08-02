@@ -138,10 +138,7 @@
                         </goals>
                         <phase>compile</phase>
                         <configuration>
-                            <executable>autoreconf</executable>
-                            <arguments>
-                                <argument>-fsi</argument>
-                            </arguments>
+                            <executable>autogen.sh</executable>
                         </configuration>
                     </execution>
                     
@@ -157,9 +154,6 @@
                         <configuration>
                             <executable>configure</executable>
                             <arguments>
-                                <argument>--enable-libxml2=yes</argument>
-                                <argument>--enable-tests=no</argument>
-                                <argument>--enable-guththila=no</argument>
                                 <argument>--enable-openssl</argument>
                                 <argument>--prefix=${basedir}/out/usr/local/wsf_c</argument>
                                 <argument>CC=gcc-4.4</argument>
