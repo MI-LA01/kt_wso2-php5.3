@@ -224,7 +224,7 @@
                         <dependencies>
                             <dependency>
                                 <groupId>com.kroknet</groupId>
-                                <artifactId>kt-wso2-php53-assembly</artifactId>
+                                <artifactId>kt_wso2-php53-assembly</artifactId>
                                 <version>1.0.0-SNAPSHOT</version>
                             </dependency>
                         </dependencies>
@@ -238,8 +238,8 @@
                                     <finalName>${package.name}-${package.version}_amd64</finalName>
                                     <appendAssemblyId>false</appendAssemblyId>
                                     <descriptorRefs>
-                			            <descriptorRef>descriptor</descriptorRef>
-              			            </descriptorRefs>    
+                		        <descriptorRef>descriptor</descriptorRef>
+              			    </descriptorRefs>    
                                 </configuration>
                             </execution>
                         </executions>
